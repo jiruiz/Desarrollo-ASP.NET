@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BaseCargaAlumnos" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.TablaCargaAlumno" Member="TablaCargaAlumno">
+    <Type Name="TablaCargaAlumno">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Dni" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Turno" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TablaCargaAlumno_Comentarios" Member="Comentarios" ThisKey="ID" OtherKey="idComentario" Type="Comentarios" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Comentarios" Member="Comentarios">
+    <Type Name="Comentarios">
+      <Column Name="idComentario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DNI" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ComentarioTexto" Type="System.String" DbType="VarChar(1500) NOT NULL" CanBeNull="false" />
+      <Association Name="TablaCargaAlumno_Comentarios" Member="TablaCargaAlumno" ThisKey="idComentario" OtherKey="ID" Type="TablaCargaAlumno" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

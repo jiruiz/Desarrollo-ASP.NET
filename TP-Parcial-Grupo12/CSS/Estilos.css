@@ -1,0 +1,51 @@
+﻿
+asp|Label {
+    background-color: #0000FF;
+    color: #00FF00;
+    font-size: 12pt;
+    font-family: Helvetica, Arial;
+}
+
+.titulo {
+    background: #0094ff;
+}
+
+
+.obligatorio {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+
+.preferencias {
+    background-color: #00FF00;
+    color: #000000;
+    font-size: 8pt;
+}
+
+
+.enfocada {
+    background-color: #66CCFF;
+    color: #3333CC;
+    font-family: Papyrus, Calibri, Arial;
+}
+
+#fondo{
+    background-color: tan;
+}
+.desenfocada {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: Arial;
+}
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error-message {
+    color: red;
+    font-weight: bold;
+}
